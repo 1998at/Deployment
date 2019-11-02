@@ -122,7 +122,7 @@ def image():
     f = ('%s.jpeg' % time.strftime("%Y%m%d-%H%M%S"))
     i.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR, f))
     image=cv2.imread(PATH_TO_TEST_IMAGES_DIR+"/"+f)##reading the image from html form
-    image = imutils.resize(image, width=600)
+    #image = imutils.resize(image, width=600)
     
     print("writing image")##checkpoint for debugging errors
     detect(image,"1"+f)##The actual Detection function
