@@ -9,8 +9,6 @@ import os
 import numpy as np
 import argparse
 import pickle
-import cv2
-import os
 import matplotlib.pyplot as plt
 from PIL import Image
 from numpy import asarray
@@ -53,7 +51,7 @@ def get_embedding(model, face_pixels):
 
 
 def extract_face(filename, required_size=(160, 160)):
-    image = Image.open(filename)
+    image = Image.fromarray(filename)
     image = image.convert('RGB')
     pixels = asarray(image)
     detector = MTCNN()
