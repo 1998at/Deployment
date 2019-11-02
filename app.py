@@ -117,6 +117,7 @@ def index():
 @app.route('/image', methods=['POST'])
 #@crossdomain(origin='*',headers=['access-control-allow-origin','Content-Type'])
 def image():
+    print(os.listdir())
 
     i = request.files['image']  # get the image
     f = ('%s.jpeg' % time.strftime("%Y%m%d-%H%M%S"))
