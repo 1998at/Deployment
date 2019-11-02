@@ -91,10 +91,7 @@ def load_dataset(directory):
 
 
 def detect(path,file):
-    model = load_model('facenet_keras.h5')
-    in_encoder=pickle.loads(open("in_encoder.pickle","rb").read())
-    out_encoder=pickle.loads(open("out_encoder.pickle","rb").read())
-    model1=pickle.loads(open("recognizer.pickle","rb").read())
+    
     face_orig=extract_face(path)
     faces=get_embedding(model,face_orig)
     x=in_encoder.transform([faces])
@@ -130,4 +127,8 @@ def image():
     #return Response("%s saved" % f)
 
 if __name__ == '__main__':
+    model = load_model('facenet_keras.h5')
+    in_encoder=pickle.loads(open("in_encoder.pickle","rb").read())
+    out_encoder=pickle.loads(open("out_encoder.pickle","rb").read())
+    model1=pickle.loads(open("recognizer.pickle","rb").read())
     app.run()
