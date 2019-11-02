@@ -113,7 +113,7 @@ def index():
 """
 # save the image as a picture
 @app.route('/image', methods=['POST'])
-#@crossdomain(origin='*',headers=['access-control-allow-origin','Content-Type'])
+@crossdomain(origin='*',headers=['access-control-allow-origin','Content-Type'])
 def image():
     print(os.listdir())
 
