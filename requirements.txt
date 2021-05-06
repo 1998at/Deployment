@@ -65,7 +65,7 @@ Werkzeug==0.16.0
 widgetsnbextension==3.5.1
 wincertstore==0.2
 zipp==0.6.0
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 gunicorn==19.9.0
 requests==2.22.0
 urllib3==1.25.6
