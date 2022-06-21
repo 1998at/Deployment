@@ -31,7 +31,7 @@ matplotlib==3.1.1
 mistune==0.8.4
 more-itertools==7.2.0
 mtcnn==0.0.9
-numpy==1.17.3
+numpy==1.22.0
 opencv-contrib-python==4.1.1.26
 pandocfilters==1.4.2
 parso==0.5.1
